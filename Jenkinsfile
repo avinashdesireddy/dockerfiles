@@ -1,9 +1,8 @@
 pipeline {
-  agent {
+  agent { label 'docker-build' } {
     docker {
       image 'avinashdesireddy/jnlp-docker-slave:alpine-19.03.1'
     }
-
   }
   stages {
     stage('GitPull') {
